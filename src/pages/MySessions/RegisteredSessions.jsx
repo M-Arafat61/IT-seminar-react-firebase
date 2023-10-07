@@ -95,9 +95,11 @@ const RegisteredSessions = ({ props }) => {
             <p className='mb-8 block font-sans text-base font-normal leading-relaxed text-white antialiased'>
               {session.description.slice(0, 200)}
             </p>
-            <h3 className=' rounded-lg py-3 px-6 text-center align-middle border-white border font-sans text-xs font-bold uppercase text-white transition-all hover:bg-black-700/75 active:bg-pink-700/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'>
-              Know about night program
-            </h3>
+            <Link to='/seminar-concert'>
+              <button className='w-full rounded-lg py-3 px-6 text-center align-middle border-white border hover:border-none font-sans text-xs font-bold uppercase text-white transition-all hover:bg-blue-700/75 active:bg-pink-700/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'>
+                Know about night program
+              </button>
+            </Link>
           </div>
         </div>
       ))}

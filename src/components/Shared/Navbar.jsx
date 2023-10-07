@@ -109,7 +109,7 @@ const Navbar = () => {
               className='mt-1 z-[2] shadow menu menu-sm dropdown-content bg-base-100 rounded-box'
             >
               <li>
-                <Link>Login</Link>
+                <Link to='/login'>Login</Link>
               </li>
             </ul>
           </div>

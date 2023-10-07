@@ -6,6 +6,8 @@ import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import SessionDetails from "./pages/SessionDetails/SessionDetails";
 import RegisteredSessions from "./pages/MySessions/RegisteredSessions";
 import SeminarConcert from "./pages/MoonLightMelodies/SeminarConcert";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
       {
         path: "/seminar-concert",
         element: <SeminarConcert></SeminarConcert>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
     ],
   },
