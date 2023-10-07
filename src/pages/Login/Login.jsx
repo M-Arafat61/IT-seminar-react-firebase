@@ -1,16 +1,26 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import useAuthContext from "../../hooks/useAuth";
 
 const Login = () => {
+  const { userLogin } = useAuthContext();
+  const location = useLocation();
+  const navigate = useNavigate();
   const handleLogin = e => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const password = form.get("password");
 
-    if (password.length < 6) {
-      // return toast.error("Password must be 6 characters or long");
-      return alert("Password must be 6 characters or long");
-    }
+    userLogin(email, password)
+      .then(res => {
+        console.log(res.user);
+        e.target.reset();
+        navigate(location?.state || "/");
+      })
+      .catch(err => {
+        console.log(err.message);
+        return alert("Please provide valid email and password");
+      });
   };
 
   return (

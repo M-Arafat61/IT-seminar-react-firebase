@@ -12,6 +12,14 @@ const Register = () => {
     const photo = form.get("photo");
     const email = form.get("email");
     const password = form.get("password");
+
+    if (password.length < 6) {
+      return alert("Password must be 6 characters or long");
+    } else if (
+      !/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\-]).+$/.test(password)
+    ) {
+      return alert("GIve one uppercase,one special character or more");
+    }
     createUser(email, password)
       .then(res => {
         profileUpdate(name, photo).then(() => {
