@@ -4,16 +4,15 @@ import useAuthContext from "../../hooks/useAuth";
 
 const Navbar = () => {
   const { user, handleUserLogOut } = useAuthContext();
-  console.log(user);
   return (
     <>
-      <div className='navbar bg-base-100 shadow-md'>
+      <div className='navbar bg-[#11009E] shadow-md'>
         <div className='navbar-start'>
           <div className='dropdown'>
             <label tabIndex={0} className='btn btn-ghost md:hidden'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                className='h-5 w-5'
+                className='h-6 w-6'
                 fill='none'
                 viewBox='0 0 24 24'
                 stroke='currentColor'
@@ -62,11 +61,11 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a className='btn btn-ghost normal-case text-xl'>techTalk</a>
+          <p className='normal-case font-bold text-xl'>techTalk</p>
         </div>
 
-        <div className='navbar-center'>
-          <ul className='menu menu-horizontal px-1'>
+        <div className='navbar-center hidden md:flex'>
+          <ul className='menu menu-horizontal px-1 text-lg font-semibold'>
             <li>
               <NavLink
                 to='/'

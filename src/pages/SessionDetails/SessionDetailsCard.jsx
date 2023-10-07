@@ -1,6 +1,9 @@
 import PropTypes from "prop-types";
 
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const SessionDetailsCard = ({ session }) => {
   const handleSessionConfirmation = () => {
     const sessionsArray = [];
@@ -8,7 +11,24 @@ const SessionDetailsCard = ({ session }) => {
     if (!addedSessions) {
       sessionsArray.push(session);
       localStorage.setItem("session", JSON.stringify(sessionsArray));
-      return alert("Thank You. You've Successfully Donated!");
+      return toast.success(
+        `Congratulations! ${session.title} session has been confirmed.`,
+        {
+          style: {
+            color: "white",
+            fontSize: "20px",
+            backgroundColor: "blue",
+          },
+          position: "top-center",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          progress: undefined,
+          theme: "colored",
+        }
+      );
     } else {
       const isExist = addedSessions.find(
         eachSession => eachSession.id === session.id
@@ -17,9 +37,40 @@ const SessionDetailsCard = ({ session }) => {
       if (!isExist) {
         sessionsArray.push(...addedSessions, session);
         localStorage.setItem("session", JSON.stringify(sessionsArray));
-        return alert("Thank You. You've Successfully Donated!");
+        return toast.success(
+          `Congratulations! ${session.title} session has been confirmed.`,
+          {
+            style: {
+              color: "white",
+              fontSize: "20px",
+              backgroundColor: "blue",
+            },
+            position: "top-center",
+            autoClose: 4000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: false,
+            progress: undefined,
+            theme: "colored",
+          }
+        );
       } else {
-        return alert("You've Already Donated for this Campaign!");
+        return toast.error("You've Already confirmed for this session!", {
+          style: {
+            color: "white",
+            fontSize: "20px",
+            backgroundColor: "red",
+          },
+          position: "top-center",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          progress: undefined,
+          theme: "colored",
+        });
       }
     }
   };
@@ -68,6 +119,7 @@ const SessionDetailsCard = ({ session }) => {
           </Link>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

@@ -51,7 +51,7 @@
   },
   {
     "id": 3,
-    "title": "Web Development Trends: Responsive Design to Progressive Web Apps",
+    "title": "Web Development: Progressive Web Apps",
     "description": "The world of web development is constantly evolving, and staying up-to-date with the latest trends is crucial for delivering exceptional user experiences. This seminar will provide an in-depth exploration of the most significant trends and best practices in web development today. We'll begin by discussing the importance of responsive design, exploring techniques and tools to create websites that adapt seamlessly to various screen sizes and devices. You'll gain insights into optimizing website performance and ensuring a consistent user experience across platforms. Progressive Web Apps (PWAs) are another hot topic in web development, and we'll delve into what makes them stand out. Learn how to turn your website into a PWA, offering users faster load times and an app-like experience right from their browsers. Throughout the session, we'll showcase real-world examples and success stories from companies that have embraced these trends, and you'll leave with a toolkit of strategies and resources to implement them in your own web development projects.",
     "image": "https://i.ibb.co/tPgRnH8/person-front-computer-working-html.jpg",
     "price": 150,
@@ -126,7 +126,7 @@
   },
   {
     "id": 6,
-    "title": "The Future of Tech: Exploring Quantum Computing and Quantum Technologies",
+    "title": "The Future of Tech: Quantum Computing and Quantum Technologies",
     "description": "The future of technology is taking a quantum leap, quite literally. Join us on a captivating journey into the world of quantum computing and quantum technologies, where the boundaries of what's possible are being redefined. We'll begin by demystifying quantum computing, explaining the principles that make it vastly more powerful than classical computing. You'll gain insights into quantum bits (q-bits), quantum algorithms, and the potential applications that could disrupt industries from cryptography to drug discovery. Quantum technologies extend beyond computing, and we'll explore quantum communication, quantum sensors, and quantum-enhanced technologies. Discover how these innovations are paving the way for ultra-secure communications and breakthroughs in scientific research. While quantum technologies hold immense promise, they also pose unique challenges and ethical considerations. We'll discuss the roadblocks and opportunities on the path to realizing the potential of the quantum realm. Whether you're a seasoned tech enthusiast or new to the world of quantum, this seminar promises to ignite your curiosity and prepare you for the future of tech.",
     "image": "https://i.ibb.co/Wzxzzts/22380779-6560470.jpg",
     "price": 200,

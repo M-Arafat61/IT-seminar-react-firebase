@@ -1,69 +1,74 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Link } from "react-router-dom";
 
 const Sponsors = () => {
   return (
-    <>
-      <h1 className='text-center text-2xl font-bold'>The Sponsors</h1>
-      <div className='grid grid-cols-2 justify-around items-center p-16 '>
-        <div className='flex gap-2 items-center p-10'>
-          <img
-            className='w-24 h-10'
-            src='https://i.ibb.co/MsvxQgQ/google-1419979903.jpg'
-            alt=''
-          />
-          <h2 className='text-2xl font-semibold italic tracking-widest'>
-            Google (now Alphabet Inc.)
-          </h2>
+    <div className='max-w-3xl m-auto pb-10 md:pb-20 flex flex-col-reverse pt-10 md:pt-0 md:flex-col '>
+      <div className='p-3 md:p-7 lg:p-14 space-y-5'>
+        <div className='flex items-center justify-center gap-3'>
+          <h1 className='text-center text-2xl font-bold '>The Sponsors</h1>
+          <div className='w-1 bg-green-500 h-16 '></div>
         </div>
-        <div className='flex gap-2 items-center p-10'>
-          <img
-            className='w-24 h-10'
-            src='https://i.ibb.co/0KCLFNV/edu.png'
-            alt=''
-          />
-          <h3 className='text-2xl font-semibold italic tracking-widest'>
-            EduTech Innovations
-          </h3>
-        </div>
-        <div className='flex gap-2 items-center p-10'>
-          <img
-            className='w-24 h-10'
-            src='https://i.ibb.co/5W951Sm/amazon.png'
-            alt=''
-          />
-          <h3 className='text-2xl font-semibold italic tracking-widest'>
-            Amazon.com Inc.
-          </h3>
-        </div>
-        <div className='flex gap-2 items-center p-10'>
-          <img
-            className='w-24 h-10'
-            src='https://i.ibb.co/DtyqtzJ/tecno-mobile8871.jpg'
-            alt=''
-          />
-          <h3 className='text-2xl font-semibold italic tracking-widest'>
-            Techno Mobile
-          </h3>
+        <div className='grid grid-cols-2 justify-around items-center gap-5'>
+          <div className='flex gap-2 items-center '>
+            <img
+              className='w-14 h-14 rounded-full'
+              src='https://i.ibb.co/MsvxQgQ/google-1419979903.jpg'
+              alt=''
+            />
+            <h2 className='text-xl font-semibold  tracking-tight'>Google</h2>
+          </div>
+          <div className='flex gap-2 items-center '>
+            <img
+              className='w-14 h-14 rounded-full'
+              src='https://i.ibb.co/0KCLFNV/edu.png'
+              alt=''
+            />
+            <h3 className='text-xl font-semibold  tracking-tight'>
+              EduTech Innovations
+            </h3>
+          </div>
+          <div className='flex gap-2 items-center '>
+            <img
+              className='w-14 h-14 rounded-full'
+              src='https://i.ibb.co/5W951Sm/amazon.png'
+              alt=''
+            />
+            <h3 className='text-xl font-semibold  tracking-tight'>
+              Amazon.com Inc.
+            </h3>
+          </div>
+          <div className='flex gap-2 items-center '>
+            <img
+              className='w-14 h-14 rounded-full'
+              src='https://i.ibb.co/DtyqtzJ/tecno-mobile8871.jpg'
+              alt=''
+            />
+            <h3 className='text-xl font-semibold  tracking-tight'>
+              Techno Mobile
+            </h3>
+          </div>
         </div>
       </div>
       <div className='relative flex items-center justify-center'>
         <img
+          className='rounded-lg'
           src='https://i.ibb.co/y82Q138/group-successful-diverse-business-partners-having-business-meeting-modern-office.jpg'
           alt=''
         />
-        <div className='absolute'>
-          <p className='text-base font-semibold'>Lets talk</p>
+        <div className='absolute w-3/4 text-white space-y-3'>
+          <p className='text-base font-semibold'>Let's talk about tech</p>
           <h2 className='text-4xl font-bold'>
-            Witness The Biggest Tech Event in 2022
+            Witness The Biggest Tech Event in 2023
           </h2>
           <Link>
-            <button className='bg-blue-600 px-4 py-2 rounded-md'>
+            <button className='select-none rounded-lg bg-blue-500 py-3 px-6 text-center  font-sans text-xs font-bold uppercase text-white shadow-md transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.95] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'>
               CONTACT US
             </button>
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

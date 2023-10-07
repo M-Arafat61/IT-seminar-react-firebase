@@ -2,6 +2,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuthContext from "../../hooks/useAuth";
 import SocialLogin from "../../components/Shared/SocialLogin";
 import Navbar from "../../components/Shared/Navbar";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const { userLogin } = useAuthContext();
@@ -19,9 +21,22 @@ const Login = () => {
         e.target.reset();
         navigate(location?.state || "/");
       })
-      .catch(err => {
-        console.log(err.message);
-        return alert("Please provide valid email and password");
+      .catch(() => {
+        return toast.error("Please give valid email and password", {
+          style: {
+            color: "white",
+            fontSize: "20px",
+            backgroundColor: "red",
+          },
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          progress: undefined,
+          theme: "colored",
+        });
       });
   };
 
@@ -84,6 +99,7 @@ const Login = () => {
             </form>
           </div>
         </div>
+        <ToastContainer />
       </div>
     </>
   );

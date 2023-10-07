@@ -9,10 +9,10 @@ const Banner = () => {
           src={bannerImage}
           alt=''
         />
-        <div className='text-green-900 bg-[#f0dede80] space-y-5 absolute left-5 p-3 w-1/2 rounded-xl '>
+        <div className='text-green-900 bg-[#f0dede80] space-y-2 md:space-y-5 absolute left-2 md:left-5 p-3 w-3/4 md:w-1/2 rounded-xl '>
           <p className='font-semibold'>Biggest Tech Event</p>
           <div className='flex items-center border-l-4 border-l-green-500 h-[50px]'>
-            <h2 className='text-2xl pl-4 font-semibold'>
+            <h2 className='text-lg font-bold md:text-2xl pl-4 md:font-semibold'>
               Growing The Global Technology Industry
             </h2>
           </div>
