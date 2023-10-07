@@ -1,7 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
 import Avatar from "../../assets/user.png";
+import useAuthContext from "../../hooks/useAuth";
 
 const Navbar = () => {
+  const { user, handleUserLogOut } = useAuthContext();
+  console.log(user);
   return (
     <>
       <div className='navbar bg-base-100 shadow-md'>
@@ -101,16 +104,31 @@ const Navbar = () => {
           <div className=' dropdown dropdown-end'>
             <label tabIndex='0' className='btn btn-ghost btn-circle avatar'>
               <div className='w-10 rounded-full'>
-                <img src={Avatar} />
+                {user && user?.photoURL !== null ? (
+                  <img src={user?.photoURL} />
+                ) : (
+                  <img src={Avatar} />
+                )}
               </div>
             </label>
             <ul
               tabIndex='0'
-              className='mt-1 z-[2] shadow menu menu-sm dropdown-content bg-base-100 rounded-box'
+              className='mt-1 z-[2] shadow menu menu-sm  dropdown-content bg-base-100 rounded-box'
             >
-              <li>
-                <Link to='/login'>Login</Link>
-              </li>
+              {user ? (
+                <>
+                  <li>
+                    <Link>{user?.displayName}</Link>
+                  </li>
+                  <li>
+                    <Link onClick={handleUserLogOut}>Logout</Link>
+                  </li>
+                </>
+              ) : (
+                <li>
+                  <Link to='/login'>Login</Link>
+                </li>
+              )}
             </ul>
           </div>
         </div>

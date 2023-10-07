@@ -8,6 +8,9 @@ import RegisteredSessions from "./pages/MySessions/RegisteredSessions";
 import SeminarConcert from "./pages/MoonLightMelodies/SeminarConcert";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import PrivateDetails from "./PrivateRoutes/PrivateDetails";
+import PrivateRegistration from "./PrivateRoutes/PrivateRegistration";
+import PrivateConcert from "./PrivateRoutes/PrivateConcert";
 
 const router = createBrowserRouter([
   {
@@ -26,16 +29,28 @@ const router = createBrowserRouter([
       },
       {
         path: "/session-details/:id",
-        element: <SessionDetails></SessionDetails>,
+        element: (
+          <PrivateDetails>
+            <SessionDetails></SessionDetails>
+          </PrivateDetails>
+        ),
         loader: () => fetch("/techtalk.json"),
       },
       {
         path: "/registered-sessions",
-        element: <RegisteredSessions></RegisteredSessions>,
+        element: (
+          <PrivateRegistration>
+            <RegisteredSessions></RegisteredSessions>
+          </PrivateRegistration>
+        ),
       },
       {
         path: "/seminar-concert",
-        element: <SeminarConcert></SeminarConcert>,
+        element: (
+          <PrivateConcert>
+            <SeminarConcert></SeminarConcert>
+          </PrivateConcert>
+        ),
       },
       {
         path: "/login",
