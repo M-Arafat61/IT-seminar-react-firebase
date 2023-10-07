@@ -1,4 +1,5 @@
 import {
+  GithubAuthProvider,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -13,6 +14,7 @@ import PropTypes from "prop-types";
 
 export const AuthContext = createContext(null);
 const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -51,6 +53,12 @@ const AuthProvider = ({ children }) => {
         console.log(err.message);
       });
   };
+  // github login
+
+  const githubLogin = () => {
+    setLoading(true);
+    return signInWithPopup(auth, githubProvider);
+  };
 
   // observer
   useEffect(() => {
@@ -71,6 +79,7 @@ const AuthProvider = ({ children }) => {
     userLogin,
     profileUpdate,
     googleLogin,
+    githubLogin,
     handleUserLogOut,
   };
   return (

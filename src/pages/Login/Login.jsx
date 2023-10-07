@@ -1,5 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuthContext from "../../hooks/useAuth";
+import SocialLogin from "../../components/Shared/SocialLogin";
 
 const Login = () => {
   const { userLogin } = useAuthContext();
@@ -75,6 +76,7 @@ const Login = () => {
                   Register one
                 </Link>
               </p>
+              <SocialLogin></SocialLogin>
             </div>
           </form>
         </div>
