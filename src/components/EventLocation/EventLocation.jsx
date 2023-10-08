@@ -1,11 +1,37 @@
 import { Link } from "react-router-dom";
 import { ImLocation } from "react-icons/im";
 import { AiOutlineMail, AiFillPhone } from "react-icons/ai";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const EventLocation = () => {
+  useEffect(() => {
+    AOS.init({
+      disable: "mobile",
+      startEvent: "DOMContentLoaded",
+      initClassName: "aos-init",
+      animatedClassName: "aos-animate",
+      useClassNames: false,
+      disableMutationObserver: false,
+      debounceDelay: 50,
+      throttleDelay: 99,
+
+      offset: 300,
+      delay: 100,
+      duration: 400,
+      easing: "ease",
+      once: false,
+      mirror: false,
+      anchorPlacement: "top-bottom",
+    });
+  }, []);
   return (
     <div className='max-w-3xl m-auto'>
-      <div className='flex flex-col md:flex-row justify-between  p-5 gap-8'>
+      <div
+        data-aos='zoom-in-down'
+        className='flex flex-col md:flex-row justify-between  p-5 gap-8'
+      >
         <div className='w-full md:w-1/2 space-y-2'>
           <hr className='w-28 border-green-500 border-2' />
           <p>Event Place</p>

@@ -1,10 +1,33 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Sponsors = () => {
+  useEffect(() => {
+    AOS.init({
+      disable: "mobile",
+      startEvent: "DOMContentLoaded",
+      initClassName: "aos-init",
+      animatedClassName: "aos-animate",
+      useClassNames: false,
+      disableMutationObserver: false,
+      debounceDelay: 50,
+      throttleDelay: 99,
+
+      offset: 300,
+      delay: 100,
+      duration: 400,
+      easing: "ease",
+      once: false,
+      mirror: false,
+      anchorPlacement: "top-bottom",
+    });
+  }, []);
   return (
     <div className='max-w-3xl m-auto pb-10 md:pb-20 flex flex-col-reverse pt-10 md:pt-0 md:flex-col '>
-      <div className='p-3 md:p-7 lg:p-14 space-y-5'>
+      <div data-aos='flip-up' className='p-3 md:p-7 lg:p-14 space-y-5'>
         <div className='flex items-center justify-center gap-3'>
           <h1 className='text-center text-2xl font-bold '>The Sponsors</h1>
           <div className='w-1 bg-green-500 h-16 '></div>

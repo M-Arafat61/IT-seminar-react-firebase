@@ -1,18 +1,48 @@
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const EventInfo = () => {
+  useEffect(() => {
+    AOS.init({
+      disable: "mobile",
+      startEvent: "DOMContentLoaded",
+      initClassName: "aos-init",
+      animatedClassName: "aos-animate",
+      useClassNames: false,
+      disableMutationObserver: false,
+      debounceDelay: 50,
+      throttleDelay: 99,
+
+      offset: 300,
+      delay: 100,
+      duration: 400,
+      easing: "ease",
+      once: false,
+      mirror: false,
+      anchorPlacement: "top-bottom",
+    });
+  }, []);
+
   return (
     <>
       <div className='max-w-3xl m-auto'>
         <div className='flex flex-col md:flex-row justify-center items-center p-3 md:p-7 lg:p-14 gap-4 '>
-          <div className='flex flex-col w-full md:w-1/2 space-y-3'>
+          <div
+            data-aos='fade-up-right'
+            className='flex flex-col w-full md:w-1/2 space-y-3'
+          >
             <p className='text-base font-semibold'>About The Event</p>
             <h3 className='text-2xl font-bold'>
               Learn The Newest Strategy Of The Technology Industry
             </h3>
             <hr className='w-28 border-2 border-green-500' />
           </div>
-          <div className='flex flex-col w-full md:w-1/2 space-y-5'>
+          <div
+            data-aos='fade-up-left'
+            className='flex flex-col w-full md:w-1/2 space-y-5'
+          >
             <p className='text-sm tracking-tighter'>
               The newest strategy in the technology industry revolves around
               rapid innovation, digital transformation, and sustainability.
