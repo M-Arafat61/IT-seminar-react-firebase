@@ -16,7 +16,7 @@ const SocialLogin = () => {
   };
   return (
     <div>
-      <div className='divider'>continue with</div>
+      <div className='divider'>or continue with</div>
       <div className='flex items-center gap-5 justify-center'>
         <div className='flex items-center'>
           <AiFillGoogleCircle className='text-2xl'></AiFillGoogleCircle>

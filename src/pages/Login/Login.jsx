@@ -41,13 +41,13 @@ const Login = () => {
   };
 
   return (
-    <>
+    <div className='max-w-6xl m-auto'>
       <Navbar></Navbar>
-      <div className='max-w-6xl m-auto flex flex-col space-y-5 '>
-        <div className='w-3/4 m-auto bg-blue-200 p-16 rounded-lg'>
+      <div className='max-w-3xl min-h-screen m-auto flex flex-col space-y-5 '>
+        <div className='w-3/4 m-auto bg-[#F5F5F5] rounded-lg'>
           <div className='relative flex  flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md'>
-            <div className='relative mx-4 mt-6 mb-4 grid h-20 place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-blue-400 to-pink-700 bg-clip-border text-white shadow-lg shadow-pink-500/40'>
-              <h3 className='block font-sans text-3xl font-semibold leading-snug tracking-normal text-white antialiased'>
+            <div className='relative mx-4 mt-6 mb-4 grid h-10 place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-blue-400 to-pink-700 bg-clip-border text-white shadow-lg shadow-pink-500/40'>
+              <h3 className='block font-sans text-lg font-semibold leading-snug tracking-normal text-white antialiased'>
                 Login your account
               </h3>
             </div>
@@ -78,20 +78,20 @@ const Login = () => {
               </div>
               <div className='p-6 pt-0'>
                 <button
-                  className='block w-full select-none rounded-lg bg-gradient-to-tr from-blue-400 to-pink-700 py-3 px-6 text-center align-middle font-sans text-base font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'
+                  className='block select-none rounded-lg bg-gradient-to-tr from-blue-400 to-pink-700 py-1 px-3 text-center align-middle font-sans text-sm font-bold text-white  shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'
                   type='submit'
                   data-ripple-light='true'
                 >
                   Login
                 </button>
 
-                <p className='mt-6 flex justify-center font-sans text-sm font-light leading-normal text-inherit antialiased'>
+                <p className='mt-3 flex font-sans text-sm font-light leading-normal text-inherit antialiased'>
                   Do not have an account?
                   <Link
                     to='/register'
                     className='ml-1 block font-sans text-sm font-bold leading-normal text-pink-500 antialiased'
                   >
-                    Register one
+                    Register
                   </Link>
                 </p>
                 <SocialLogin></SocialLogin>
@@ -101,7 +101,7 @@ const Login = () => {
         </div>
         <ToastContainer />
       </div>
-    </>
+    </div>
   );
 };
 

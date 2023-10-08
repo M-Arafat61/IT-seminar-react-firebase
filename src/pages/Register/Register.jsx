@@ -35,21 +35,21 @@ const Register = () => {
   };
 
   return (
-    <>
+    <div className='max-w-6xl m-auto '>
       <Navbar></Navbar>
-      <div className='max-w-6xl m-auto flex flex-col space-y-5 '>
-        <div className='w-3/4 m-auto bg-blue-200 p-16 rounded-lg'>
+      <div className='max-w-3xl min-h-screen m-auto flex flex-col '>
+        <div className='w-3/4 m-auto bg-[#F5F5F5] rounded-lg'>
           <div className='relative flex  flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md'>
-            <div className='relative mx-4 mt-6 mb-4 grid h-20 place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-cyan-400 to-pink-800 bg-clip-border text-white shadow-lg shadow-pink-500/40'>
-              <h3 className='block font-sans text-3xl font-semibold leading-snug tracking-normal text-white antialiased'>
-                Register for an account
+            <div className='relative mx-4 mt-6 mb-4 grid h-10 place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-cyan-400 to-pink-800 bg-clip-border text-white shadow-lg shadow-pink-500/40'>
+              <h3 className='block font-sans text-lg font-semibold leading-snug tracking-normal  antialiased'>
+                Register account
               </h3>
             </div>
             <form onSubmit={handleRegistration}>
               <div className='flex flex-col gap-4 p-6'>
                 <div className='relative h-11 w-full min-w-[200px]'>
                   <input
-                    className='peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50'
+                    className='peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal  outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50'
                     type='text'
                     required
                     name='name'
@@ -60,7 +60,7 @@ const Register = () => {
                 </div>
                 <div className='relative h-11 w-full min-w-[200px]'>
                   <input
-                    className='peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50'
+                    className='peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal  outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50'
                     required
                     type='text'
                     name='photo'
@@ -72,7 +72,7 @@ const Register = () => {
 
                 <div className='relative h-11 w-full min-w-[200px]'>
                   <input
-                    className='peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50'
+                    className='peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal  outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50'
                     type='email'
                     required
                     name='email'
@@ -83,7 +83,7 @@ const Register = () => {
                 </div>
                 <div className='relative h-11 w-full min-w-[200px]'>
                   <input
-                    className='peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50'
+                    className='peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal  outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50'
                     required
                     type='password'
                     name='password'
@@ -107,7 +107,7 @@ const Register = () => {
                       name='checkbox'
                       required
                     />
-                    <span className='pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100'>
+                    <span className='pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4  opacity-0 transition-opacity peer-checked:opacity-100'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
                         className='h-3.5 w-3.5'
@@ -125,7 +125,7 @@ const Register = () => {
                     </span>
                   </label>
                   <label
-                    className='mt-px cursor-pointer select-none font-light text-gray-700'
+                    className='mt-px cursor-pointer select-none font-light '
                     htmlFor='checkbox'
                   >
                     I agree to the Terms and Conditions
@@ -134,14 +134,14 @@ const Register = () => {
               </div>
               <div className='p-6 pt-0'>
                 <button
-                  className='block w-full select-none rounded-lg bg-gradient-to-tr from-cyan-400 to-pink-800  py-3 px-6 text-center align-middle font-sans text-base font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'
+                  className='block select-none rounded-lg bg-gradient-to-tr from-cyan-400 to-pink-800  py-1 px-3 text-center align-middle font-sans text-sm font-bold text-white  shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'
                   type='submit'
                   data-ripple-light='true'
                 >
                   Register
                 </button>
 
-                <p className='mt-6 flex justify-center font-sans text-sm font-light leading-normal text-inherit antialiased'>
+                <p className='mt-6 flex font-sans text-sm font-light leading-normal text-inherit antialiased'>
                   Already have an account?
                   <Link
                     to='/login'
@@ -156,7 +156,7 @@ const Register = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
