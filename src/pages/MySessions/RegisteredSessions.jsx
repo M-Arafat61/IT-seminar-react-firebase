@@ -17,7 +17,7 @@ const RegisteredSessions = () => {
       setNotFound("No Sessions registered for you! please register");
     }
   }, []);
-  console.log(sessions);
+  // console.log(sessions);
   return (
     <>
       <div className='max-w-6xl m-auto space-y-5'>

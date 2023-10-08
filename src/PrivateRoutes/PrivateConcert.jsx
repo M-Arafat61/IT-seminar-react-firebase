@@ -9,7 +9,7 @@ const PrivateConcert = ({ children }) => {
     return <h1 className='text-5xl text-center'>Loading...</h1>;
   }
 
-  if (user?.email) {
+  if (user) {
     return children;
   }
   return <Navigate state={location.pathname} to='/login' />;

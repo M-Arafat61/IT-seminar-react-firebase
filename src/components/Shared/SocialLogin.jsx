@@ -1,14 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuthContext from "../../hooks/useAuth";
 import { AiFillGoogleCircle, AiFillGithub } from "react-icons/ai";
 
 const SocialLogin = () => {
   const { googleLogin, githubLogin } = useAuthContext();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleSocialLogin = media => {
     media()
       .then(res => {
-        console.log(res.user);
+        console.log(res);
+        navigate(location?.state || "/");
       })
       .catch(err => {
         console.log(err.message);
@@ -20,7 +23,7 @@ const SocialLogin = () => {
       <div className='flex items-center gap-5 justify-center'>
         <div className='flex items-center'>
           <AiFillGoogleCircle className='text-2xl'></AiFillGoogleCircle>
-          <Link>
+          <Link state={location.pathname}>
             <button
               onClick={() => handleSocialLogin(googleLogin)}
               className='btn btn-outline btn-primary'
@@ -31,7 +34,7 @@ const SocialLogin = () => {
         </div>
         <div className='flex items-center'>
           <AiFillGithub className='text-2xl'></AiFillGithub>
-          <Link>
+          <Link state={location.pathname}>
             <button
               onClick={() => handleSocialLogin(githubLogin)}
               className='btn btn-outline btn-primary'
