@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "./Root";
 import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import SessionDetails from "./pages/SessionDetails/SessionDetails";
 import RegisteredSessions from "./pages/MySessions/RegisteredSessions";
@@ -22,10 +21,6 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
         loader: () => fetch("/techtalk.json"),
-      },
-      {
-        path: "/about",
-        element: <About></About>,
       },
       {
         path: "/session-details/:id",

@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import SessionDetailsCard from "./SessionDetailsCard";
 import Navbar from "../../components/Shared/Navbar";
+import Footer from "../../components/Footer/Footer";
 
 const SessionDetails = () => {
   const { id } = useParams();
@@ -11,9 +12,9 @@ const SessionDetails = () => {
   );
 
   return (
-    <>
+    <div className='max-w-6xl m-auto'>
       <Navbar></Navbar>
-      <div className='p-10 max-w-6xl m-auto'>
+      <div className='p-5 lg:p-10 '>
         {filteredSession.map(session => (
           <SessionDetailsCard
             key={session.id}
@@ -21,7 +22,8 @@ const SessionDetails = () => {
           ></SessionDetailsCard>
         ))}
       </div>
-    </>
+      <Footer></Footer>
+    </div>
   );
 };
 

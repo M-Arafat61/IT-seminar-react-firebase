@@ -2,6 +2,9 @@ import { Link, useNavigate } from "react-router-dom";
 import useAuthContext from "../../hooks/useAuth";
 import SocialLogin from "../../components/Shared/SocialLogin";
 import Navbar from "../../components/Shared/Navbar";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Footer from "../../components/Footer/Footer";
 
 const Register = () => {
   const { createUser, profileUpdate } = useAuthContext();
@@ -20,7 +23,24 @@ const Register = () => {
     } else if (
       !/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\-]).+$/.test(password)
     ) {
-      return alert("GIve one uppercase,one special character or more");
+      return toast.error(
+        "Password must contain one uppercase,one special character or more",
+        {
+          style: {
+            color: "white",
+            fontSize: "20px",
+            backgroundColor: "red",
+          },
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          progress: undefined,
+          theme: "colored",
+        }
+      );
     }
     createUser(email, password)
       .then(res => {
@@ -156,6 +176,8 @@ const Register = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
+      <Footer></Footer>
     </div>
   );
 };

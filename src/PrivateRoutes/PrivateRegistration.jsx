@@ -8,10 +8,10 @@ const PrivateRegistration = ({ children }) => {
     return <h1 className='text-5xl text-center'>Loading...</h1>;
   }
 
-  if (!user?.email) {
-    return <Navigate to='/login' />;
+  if (user?.email) {
+    return children;
   }
-  return children;
+  return <Navigate state={location.pathname} to='/login'></Navigate>;
 };
 PrivateRegistration.propTypes = {
   children: PropTypes.object,

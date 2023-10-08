@@ -4,11 +4,13 @@ import SocialLogin from "../../components/Shared/SocialLogin";
 import Navbar from "../../components/Shared/Navbar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "../../components/Footer/Footer";
 
 const Login = () => {
   const { userLogin } = useAuthContext();
   const location = useLocation();
   const navigate = useNavigate();
+  console.log(location);
   const handleLogin = e => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
@@ -21,8 +23,8 @@ const Login = () => {
         e.target.reset();
         navigate(location?.state || "/");
       })
-      .catch(() => {
-        return toast.error("Please give valid email and password", {
+      .catch(err => {
+        return toast.error(`${err.message}`, {
           style: {
             color: "white",
             fontSize: "20px",
@@ -101,6 +103,7 @@ const Login = () => {
         </div>
         <ToastContainer />
       </div>
+      <Footer></Footer>
     </div>
   );
 };

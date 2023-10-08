@@ -77,8 +77,8 @@ const SessionDetailsCard = ({ session }) => {
 
   return (
     <div className=''>
-      <div className='relative flex w-full flex-row rounded-xl  bg-clip-border text-white shadow-md'>
-        <div className='relative m-0 w-1/2 shrink-0 overflow-hidden rounded-xl rounded-r-none  bg-clip-border text-white'>
+      <div className='relative flex flex-col-reverse md:flex-col w-full lg:flex-row rounded-xl  bg-clip-border text-white shadow-md'>
+        <div className='relative m-0 lg:w-1/2 shrink-0 overflow-hidden rounded-xl rounded-r-none  bg-clip-border text-white'>
           <img
             src={session.image}
             alt='image'
@@ -86,20 +86,20 @@ const SessionDetailsCard = ({ session }) => {
           />
         </div>
         <div className='p-6'>
-          <h6 className='mb-4 block font-sans text-base font-semibold uppercase leading-relaxed tracking-normal text-pink-500 antialiased'>
+          <h6 className='mb-4 block  text-2xl font-semibold uppercase leading-relaxed tracking-normal antialiased'>
             {session.title}
           </h6>
 
-          <p className='mb-8 block font-sans text-base font-normal leading-relaxed text-white antialiased'>
+          <p className='mb-8 block  text-base font-normal leading-relaxed text-white antialiased'>
             {session.description}
           </p>
           <Link className='inline-block' href='#'>
             <button
               onClick={handleSessionConfirmation}
-              className='flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle border-white hover:border-none border font-sans text-xs font-bold uppercase text-white transition-all hover:bg-blue-700/75 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'
+              className='flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle border-white hover:border-none border  text-xs font-bold uppercase text-white transition-all hover:bg-blue-700/75 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'
               type='button'
             >
-              Confirm session fees: ${session.price}
+              Confirm session Registration: ${session.price}
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 fill='none'

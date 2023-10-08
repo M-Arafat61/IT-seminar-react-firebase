@@ -1,12 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
-import Avatar from "../../assets/user.png";
 import useAuthContext from "../../hooks/useAuth";
 
 const Navbar = () => {
   const { user, handleUserLogOut } = useAuthContext();
   return (
     <>
-      <div className='navbar bg-[#11009E] shadow-md'>
+      <div className='navbar bg-blue-500 shadow-md p-5'>
         <div className='navbar-start'>
           <div className='dropdown'>
             <label tabIndex={0} className='btn btn-ghost md:hidden'>
@@ -27,13 +26,13 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box'
+              className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-black rounded-box'
             >
               <li>
                 <NavLink
                   to='/'
                   className={({ isActive }) =>
-                    isActive ? "underline text-green-600 font-semibold " : ""
+                    isActive ? "underline text-white font-semibold " : ""
                   }
                 >
                   Home
@@ -43,7 +42,7 @@ const Navbar = () => {
                 <NavLink
                   to='/registered-sessions'
                   className={({ isActive }) =>
-                    isActive ? "underline text-green-600 font-semibold " : ""
+                    isActive ? "underline text-white font-semibold " : ""
                   }
                 >
                   My Sessions
@@ -53,7 +52,7 @@ const Navbar = () => {
                 <NavLink
                   to='/seminar-concert'
                   className={({ isActive }) =>
-                    isActive ? "underline text-green-600 font-semibold " : ""
+                    isActive ? "underline text-white font-semibold " : ""
                   }
                 >
                   Moonlight Melodies
@@ -61,7 +60,9 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <p className='normal-case font-bold text-xl'>techTalk</p>
+          <button className='hover:btn-ghost px-4 py-2 rounded-lg font-bold text-2xl '>
+            tech<span className='text-emerald-300'>Talk</span>
+          </button>
         </div>
 
         <div className='navbar-center hidden md:flex'>
@@ -70,7 +71,7 @@ const Navbar = () => {
               <NavLink
                 to='/'
                 className={({ isActive }) =>
-                  isActive ? "underline text-green-600 font-semibold " : ""
+                  isActive ? "underline text-white font-semibold " : ""
                 }
               >
                 Home
@@ -80,7 +81,7 @@ const Navbar = () => {
               <NavLink
                 to='/registered-sessions'
                 className={({ isActive }) =>
-                  isActive ? "underline text-green-600 font-semibold " : ""
+                  isActive ? "underline text-white font-semibold " : ""
                 }
               >
                 My Sessions
@@ -90,7 +91,7 @@ const Navbar = () => {
               <NavLink
                 to='/seminar-concert'
                 className={({ isActive }) =>
-                  isActive ? "underline text-green-600 font-semibold " : ""
+                  isActive ? "underline text-white font-semibold " : ""
                 }
               >
                 Moonlight Melodies
@@ -101,18 +102,24 @@ const Navbar = () => {
 
         <div className='navbar-end'>
           <div className=' dropdown dropdown-end'>
-            <label tabIndex='0' className='btn btn-ghost btn-circle avatar'>
-              <div className='w-10 rounded-full'>
-                {user && user?.photoURL !== null ? (
-                  <img src={user?.photoURL} />
-                ) : (
-                  <img src={Avatar} />
-                )}
-              </div>
-            </label>
+            {user && user?.photoURL !== null ? (
+              <>
+                <label tabIndex='0' className='btn btn-ghost btn-circle avatar'>
+                  <div className='w-12 rounded-full'>
+                    <img src={user?.photoURL} />
+                  </div>
+                </label>
+              </>
+            ) : (
+              // <img src={Avatar} />
+              <Link to='/login'>
+                <button className='btn btn-outline '>Login</button>
+              </Link>
+            )}
+
             <ul
               tabIndex='0'
-              className='mt-1 z-[2] shadow menu menu-sm  dropdown-content bg-base-100 rounded-box'
+              className='mt-1 z-[2] shadow menu text-white menu-sm  dropdown-content rounded-box'
             >
               {user ? (
                 <>
@@ -124,9 +131,7 @@ const Navbar = () => {
                   </li>
                 </>
               ) : (
-                <li>
-                  <Link to='/login'>Login</Link>
-                </li>
+                ""
               )}
             </ul>
           </div>

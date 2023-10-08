@@ -7,6 +7,7 @@ import Footer from "../../components/Footer/Footer";
 const RegisteredSessions = () => {
   const [sessions, setSessions] = useState([]);
   const [notFound, setNotFound] = useState("");
+
   useEffect(() => {
     const addedSessionItems = JSON.parse(localStorage.getItem("session"));
 
@@ -30,7 +31,7 @@ const RegisteredSessions = () => {
         {sessions.map(session => (
           <div
             key={session.id}
-            className='relative flex w-full flex-col rounded-xl  bg-clip-border text-white border-green-500 border p-2'
+            className='relative flex w-full flex-col rounded-xl  bg-clip-border text-white border-emerald-500 border p-2'
           >
             <div className='relative w-3/4 m-auto shrink-0 overflow-hidden rounded-xl rounded-r-none  bg-clip-border text-white'>
               <img
