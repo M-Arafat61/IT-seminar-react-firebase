@@ -20,8 +20,7 @@ console.log(greetign);
 
 #### Answer: B: `ReferenceError: greetign is not defined`
 
-<i>Write your explanation here</i>
-Declared variable greeting is empty initially, assigning an empty object to a variable that isn't declared using let/var/const and doing it console definitely give referenceError as greetign isn't defined.
+<i>Declared variable greeting is empty initially, assigning an empty object to a variable that isn't declared using let/var/const and doing it console definitely give referenceError as greetign isn't defined.</i>
 
 </p>
 </details>
@@ -46,8 +45,7 @@ sum(1, "2");
 
 #### Answer: C: `"12"`
 
-<i>Write your explanation here</i>
-sum function will convert int 1 to string for it's dynamic behaviour and concatenate string 1 and 2 as "12".
+<i>sum function will convert int 1 to string for it's dynamic behaviour and concatenate string 1 and 2 as "12".</i>
 
 </p>
 </details>
@@ -73,8 +71,7 @@ console.log(food);
 
 #### Answer: A: `['🍕', '🍫', '🥑', '🍔']`
 
-<i>Write your explanation here</i>
-Provided code gives an array of food items, info variable construct an object with property favoriteFood and gives food array 0 index item as value. After that info variable updates it's property favoriteFood with a new value. So, it doesn't affect the main array.Hence, array food remains unchanged.
+<i>Provided code gives an array of food items, info variable construct an object with property favoriteFood and gives food array 0 index item as value. After that info variable updates it's property favoriteFood with a new value. So, it doesn't affect the main array.Hence, array food remains unchanged.</i>
 
 </p>
 </details>
@@ -99,8 +96,7 @@ console.log(sayHi());
 
 #### Answer: `Hi there, undefined`
 
-<i>Write your explanation here</i>
-function sayHi takes a parameter - name, it returns concatenated Hi there and the parameter. While console logging the function without parameter the function returns Hi there and undefined because of parameter not in function call.
+<i>function sayHi takes a parameter - name, it returns concatenated Hi there and the parameter. While console logging the function without parameter the function returns Hi there and undefined because of parameter not in function call.</i>
 
 </p>
 </details>
@@ -128,8 +124,7 @@ console.log(count);
 
 #### Answer: C: 3
 
-<i>Write your explanation here</i>
-Count initially 0, when forEach loop continues on nums array if condition checks for num as element of the array. When num 0, if condition is not true because 0 is falsy value.So, first iteration never happens. When num 1, count also 1 and for num 2 also 3 count sets as 2 and 3.Finally, count set as 3 and the loop ends.
+<i>Count initially 0, when forEach loop continues on nums array if condition checks for num as element of the array. When num 0, if condition is not true because 0 is falsy value.So, first iteration never happens. When num 1, count also 1 and for num 2 also 3 count sets as 2 and 3.Finally, count set as 3 and the loop ends.</i>
 
 </p>
 </details>
