@@ -19,7 +19,21 @@ const Register = () => {
     const password = form.get("password");
 
     if (password.length < 6) {
-      return alert("Password must be 6 characters or long");
+      return toast.error("Password must be 6 characters or long", {
+        style: {
+          color: "white",
+          fontSize: "20px",
+          backgroundColor: "red",
+        },
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+        theme: "colored",
+      });
     } else if (
       !/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\-]).+$/.test(password)
     ) {
@@ -43,15 +57,29 @@ const Register = () => {
       );
     }
     createUser(email, password)
-      .then(res => {
+      .then(() => {
         profileUpdate(name, photo).then(() => {
           navigate("/");
         });
-        console.log(res.user);
-        console.log("Account created successfully");
         e.target.reset();
       })
-      .catch(err => console.log(err.message));
+      .catch(err => {
+        return toast.error(`${err.message}`, {
+          style: {
+            color: "white",
+            fontSize: "20px",
+            backgroundColor: "red",
+          },
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          progress: undefined,
+          theme: "colored",
+        });
+      });
   };
 
   return (
