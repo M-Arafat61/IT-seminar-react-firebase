@@ -7,7 +7,7 @@
     "price": 100,
     "speakers": [
       {
-        "name": "Annie xo",
+        "name": "Jane Smith",
         "title": "CTO, Tech Innovations Inc.",
         "image": "https://i.ibb.co/dMNfyCX/young-woman-working-laptop-isolated-white-background.jpg",
         "time": "10:00 AM - 11:30 AM",
@@ -15,7 +15,7 @@
         "place": "Main Hall"
       },
       {
-        "name": "Jane Smith",
+        "name": "Xo Annie",
         "title": "AI Researcher, FutureTech Labs",
         "image": "https://i.ibb.co/8mfwqp4/brunette-business-woman-with-wavy-long-hair-blue-eyes-stands-holding-notebook-hands.jpg",
         "time": "11:45 AM - 1:15 PM",

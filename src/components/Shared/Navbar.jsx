@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuthContext from "../../hooks/useAuth";
+import { FcConferenceCall } from "react-icons/fc";
 
 const Navbar = () => {
   const { user, handleUserLogOut } = useAuthContext();
@@ -60,7 +61,12 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <button className='hover:btn-ghost px-4 py-2 rounded-lg font-bold text-2xl '>
+
+          <button
+            className='hover:btn-g
+            host px-4 py-2 rounded-lg font-bold text-2xl flex items-center gap-1'
+          >
+            <FcConferenceCall className='text-5xl ' />
             tech<span className='text-emerald-300'>Talk</span>
           </button>
         </div>

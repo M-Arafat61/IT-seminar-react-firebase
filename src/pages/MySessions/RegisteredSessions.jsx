@@ -20,7 +20,7 @@ const RegisteredSessions = () => {
   // console.log(sessions);
   return (
     <>
-      <div className='max-w-6xl m-auto space-y-5'>
+      <div className='max-w-6xl m-auto space-y-24'>
         <Navbar></Navbar>
         {notFound && (
           <p className='min-h-screen text-center flex text-white justify-center items-center text-3xl font-semibold uppercase'>
@@ -31,7 +31,7 @@ const RegisteredSessions = () => {
         {sessions.map(session => (
           <div
             key={session.id}
-            className='relative flex w-full flex-col rounded-xl  bg-clip-border text-white border-emerald-500 border p-2'
+            className='relative flex w-full flex-col rounded-xl  bg-clip-border text-white p-2'
           >
             <div className='relative w-3/4 m-auto shrink-0 overflow-hidden rounded-xl rounded-r-none  bg-clip-border text-white'>
               <img
@@ -45,9 +45,11 @@ const RegisteredSessions = () => {
 
             <div className='flex items-center justify-center gap-3 p-5'>
               <div className='w-1 bg-green-500 h-16 '></div>
-              <h1 className='text-center text-2xl font-bold '>Session on</h1>
+              <h1 className='text-center text-blue-500 text-2xl font-bold '>
+                Session on
+              </h1>
             </div>
-            <h6 className='mb-4 block text-center text-2xl font-semibold uppercase leading-relaxed tracking-normal  antialiased'>
+            <h6 className='mb-4 text-blue-500  block text-center text-2xl font-semibold uppercase leading-relaxed tracking-normal  antialiased'>
               {session.title}
             </h6>
 
@@ -120,6 +122,7 @@ const RegisteredSessions = () => {
             </Link>
           </div>
         ))}
+
         <Footer></Footer>
       </div>
     </>
